@@ -28,8 +28,8 @@ const LayoutPublic = () => {
                     ></div>
                     <div
                         className={`${
-                            openNavbar ? "w-56" : "w-0 p-0"
-                        } bg-brownMain/95 min-h-screen w-56 fixed top-0 left-0 p-2 transition-all duration-300`}
+                            openNavbar ? "w-56 p-2" : "w-0 p-0"
+                        } bg-brownMain/95 min-h-screen fixed top-0 left-0 transition-all duration-300`}
                     >
                         <button
                             className={`${!openNavbar && "hidden"} ml-3 mt-7`}
