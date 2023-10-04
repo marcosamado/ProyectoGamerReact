@@ -1,18 +1,21 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const LayoutPublic = () => {
     return (
         <>
-            <header className="bg-brownMain py-8 shadow-sm h-28">
+            <header className="bg-brownMain py-8 shadow-sm h-28 ">
                 <Navbar />
             </header>
 
-            <main className="">
+            <main className="min-h-screen">
                 <Outlet />
             </main>
 
-            <footer>ESTE ES EL FOOTER</footer>
+            <footer className=" bg-brownMain">
+                <Footer />
+            </footer>
         </>
     );
 };

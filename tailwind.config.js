@@ -5,7 +5,8 @@ export default {
         extend: {
             colors: {
                 brownMain: "rgb(34 34 34)",
-            },
+                orangeMain: "rgb(203 20 24)" 
+            }
         },
     },
     plugins: [],

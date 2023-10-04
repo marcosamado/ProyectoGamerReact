@@ -16,12 +16,12 @@ const Navbar = () => {
 
     return (
         <div className=" flex flex-row justify-between">
-            <button className="ml-4" onClick={handleOpenNavbar}>
+            <div className="ml-4">
+                <img src={logoGamer} alt="Logo Gamer" />
+            </div>
+            <button className="mr-4" onClick={handleOpenNavbar}>
                 <BurguerIcon />
             </button>
-            <div className="mr-4">
-                <img src={logoGamer} alt="" />
-            </div>
 
             <div
                 className={`${
@@ -32,47 +32,53 @@ const Navbar = () => {
             <div
                 className={`${
                     openNavbar ? "w-56 p-2" : "w-0 p-0"
-                } bg-brownMain/95 min-h-screen fixed top-0 left-0 transition-all duration-300`}
+                } bg-brownMain/95 min-h-screen fixed top-0 right-0 transition-all duration-150`}
             >
                 <button
-                    className={`${!openNavbar && "hidden"} ml-3 mt-7`}
+                    className={`${!openNavbar && "hidden"} `}
                     onClick={handleClosenavbar}
                 >
                     <CrossIcon />
                 </button>
 
                 <div
-                    className={`${!openNavbar && "hidden"} flex flex-col gap-2`}
+                    className={`${
+                        !openNavbar && "hidden"
+                    } flex flex-col gap-2 mt-5`}
                 >
-                    <button className="text-white border w-full mt-6">
-                        Iniciar sesion
-                    </button>
-                    <button className="text-white border w-full">
-                        Registrarse
-                    </button>
+                    <Link to="/login" onClick={handleClosenavbar}>
+                        <button className="text-white border w-full rounded-md text-xl py-1 bg-orangeMain border-orangeMain">
+                            Iniciar sesion
+                        </button>
+                    </Link>
+                    <Link to="/registro" onClick={handleClosenavbar}>
+                        <button className="text-white border w-full rounded-md text-xl py-1">
+                            Registrarse
+                        </button>
+                    </Link>
                 </div>
                 <ul
                     className={`${
                         !openNavbar && "hidden"
-                    } flex flex-col text-left ml-3 gap-5 text-xl text-white mt-10`}
+                    } flex flex-col text-left ml-3 gap-5 text-xl text-white mt-5`}
                 >
                     <Link to="/" onClick={handleClosenavbar}>
-                        <li className="hover:bg-yellow-400 rounded-sm p-2">
+                        <li className="hover:bg-orangeMain rounded-sm p-2">
                             HOME
                         </li>
                     </Link>
                     <Link to="/productos" onClick={handleClosenavbar}>
-                        <li className="hover:bg-yellow-400 rounded-sm p-2">
+                        <li className="hover:bg-orangeMain rounded-sm p-2">
                             Productos
                         </li>
                     </Link>
                     <Link to="/ofertas" onClick={handleClosenavbar}>
-                        <li className="hover:bg-yellow-400 rounded-sm p-2">
+                        <li className="hover:bg-orangeMain rounded-sm p-2">
                             Ofertas
                         </li>
                     </Link>
                     <Link to="/carrito" onClick={handleClosenavbar}>
-                        <li className="hover:bg-yellow-400 rounded-sm p-2">
+                        <li className="hover:bg-orangeMain rounded-sm p-2">
                             Carrito
                         </li>
                     </Link>

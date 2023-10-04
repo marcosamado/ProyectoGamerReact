@@ -4,7 +4,7 @@ const CrossIcon = () => {
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
             fill="currentColor"
-            className="w-10 h-10 text-white right-0 left-0"
+            className="w-6 h-6 text-white right-0 left-0"
         >
             <path
                 fillRule="evenodd"
