@@ -44,7 +44,7 @@ const Navbar = () => {
                 <div
                     className={`${
                         !openNavbar && "hidden"
-                    } flex flex-col gap-2 mt-5`}
+                    } flex flex-col gap-2 mt-20`}
                 >
                     <Link to="/login" onClick={handleClosenavbar}>
                         <button className="text-white border w-full rounded-md text-xl py-1 bg-orangeMain border-orangeMain">

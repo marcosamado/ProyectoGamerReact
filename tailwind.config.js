@@ -5,8 +5,11 @@ export default {
         extend: {
             colors: {
                 brownMain: "rgb(34 34 34)",
-                orangeMain: "rgb(203 20 24)" 
-            }
+                orangeMain: "rgb(203 20 24)",
+            },
+            fontFamily: {
+                roboto: "roboto",
+            },
         },
     },
     plugins: [],

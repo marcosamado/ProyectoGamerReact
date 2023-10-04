@@ -5,15 +5,15 @@ import Footer from "../components/Footer";
 const LayoutPublic = () => {
     return (
         <>
-            <header className="bg-brownMain py-8 shadow-sm h-28 ">
+            <header className="bg-brownMain py-8 shadow-sm h-28 font-roboto">
                 <Navbar />
             </header>
 
-            <main className="min-h-screen">
+            <main className="min-h-screen font-roboto">
                 <Outlet />
             </main>
 
-            <footer className=" bg-brownMain">
+            <footer className=" bg-brownMain font-roboto">
                 <Footer />
             </footer>
         </>
