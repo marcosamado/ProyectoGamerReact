@@ -1,4 +1,14 @@
+import ProductCard from "../components/ProductCard";
+import { useFetchProducts } from "../hooks/useFetchProducts";
+
 const HomePage = () => {
+    const { data, loading, error } = useFetchProducts(
+        "src/fakeApiProduct/apiProductos.json"
+    );
+
+    if (loading) return <p>Cargado...</p>;
+    if (error) return <p>ERROR DE FETCHING</p>;
+
     return (
         <div className="">
             <section
@@ -14,8 +24,18 @@ const HomePage = () => {
                     Comprar
                 </button>
             </section>
-            <section>
-                <h2>Productos destacados</h2>
+
+            <section className="">
+                <h2 className="text-black text-3xl font-bold text-center mt-4">
+                    Productos destacados
+                </h2>
+                <ul>
+                    {data
+                        .filter((product) => product.off)
+                        .map((product) => (
+                            <ProductCard key={product.id} {...product} />
+                        ))}
+                </ul>
             </section>
             <section>
                 <h2>Productos estrellas</h2>
