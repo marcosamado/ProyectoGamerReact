@@ -1,18 +1,11 @@
-import { useParams } from "react-router-dom";
-import { useFetchProducts } from "../hooks/useFetchProducts";
+import ProductDescription from "../components/ProductDescription";
 
 const ProductDetailPage = () => {
-    const { data, loading, error } = useFetchProducts(
-        "../src/fakeApiProduct/apiProductos.json"
+    return (
+        <div className="container w-3/4 border-2 border-gray-900 shadow-xl shadow-slate-700 rounded-lg my-10 mx-auto flex flex-col justify-between p-2 gap-2">
+            <ProductDescription />
+        </div>
     );
-    const { id } = useParams();
-    const idProduct = id - 1;
-
-    if (loading) return <p>Cargando...</p>;
-    if (error) return <p>Error de Fetching</p>;
-
-    console.log(data[idProduct]);
-    return <div>ProductDetailPage</div>;
 };
 
 export default ProductDetailPage;

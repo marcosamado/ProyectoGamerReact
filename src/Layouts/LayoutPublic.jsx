@@ -9,11 +9,11 @@ const LayoutPublic = () => {
                 <Navbar />
             </header>
 
-            <main className="min-h-screen font-roboto">
+            <main className=" min-h-screen font-roboto">
                 <Outlet />
             </main>
 
-            <footer className=" bg-brownMain font-roboto">
+            <footer className="bg-brownMain font-roboto">
                 <Footer />
             </footer>
         </>

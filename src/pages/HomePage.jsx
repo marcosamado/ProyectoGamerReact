@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import ProductCard from "../components/ProductCard";
 import { useFetchProducts } from "../hooks/useFetchProducts";
 
@@ -20,9 +21,11 @@ const HomePage = () => {
                     <span className="text-orangeMain">25% </span>de descuento en
                     juegos de playstation 4
                 </h1>
-                <button className="text-2xl text-white bg-orangeMain h-16 w-56 rounded-md text-center">
-                    Comprar
-                </button>
+                <Link to="/productos">
+                    <button className="text-2xl text-white bg-orangeMain h-16 w-56 rounded-md text-center">
+                        Comprar
+                    </button>
+                </Link>
             </section>
 
             <section className="">
@@ -42,12 +45,16 @@ const HomePage = () => {
                     Productos estrellas
                 </h2>
                 <div className="flex flex-col items-center justify-around gap-10 my-8">
-                    <div className="h-24 w-72 bg-[url('src/images/banner1.png')] text-white bg-no-repeat flex flex-col items-end justify-center rounded-md shadow-md shadow-gray-700">
-                        <p className="mr-10">Sillas Gamer</p>
-                    </div>
-                    <div className="h-24 w-72 bg-[url('src/images/banner2.png')] text-white bg-no-repeat flex flex-col items-end justify-center rounded-md shadow-md shadow-gray-700">
-                        <p className="mr-7">Computadoras</p>
-                    </div>
+                    <Link to="/productos">
+                        <div className="h-24 w-72 bg-[url('src/images/banner1.png')] text-white bg-no-repeat flex flex-col items-end justify-center rounded-md shadow-md shadow-gray-700">
+                            <p className="mr-10">Sillas Gamer</p>
+                        </div>
+                    </Link>
+                    <Link to="/productos">
+                        <div className="h-24 w-72 bg-[url('src/images/banner2.png')] text-white bg-no-repeat flex flex-col items-end justify-center rounded-md shadow-md shadow-gray-700">
+                            <p className="mr-7">Computadoras</p>
+                        </div>
+                    </Link>
                 </div>
             </section>
         </div>
