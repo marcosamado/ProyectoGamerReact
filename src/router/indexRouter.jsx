@@ -21,11 +21,16 @@ export const router = createBrowserRouter([
             },
             {
                 path: "/productos",
-                element: <ProductsPage />,
-            },
-            {
-                path: "/productos/:id",
-                element: <ProductDetailPage />,
+                children: [
+                    {
+                        index: true,
+                        element: <ProductsPage />,
+                    },
+                    {
+                        path: ":id",
+                        element: <ProductDetailPage />,
+                    },
+                ],
             },
             {
                 path: "/registro",
