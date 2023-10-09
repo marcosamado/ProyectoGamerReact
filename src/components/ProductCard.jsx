@@ -9,7 +9,7 @@ const ProductCard = ({ precio, title, url, off, id }) => {
                         <img className="w-full h-full " src={url} alt={title} />
                     </div>
 
-                    <div className=" w-full h-full p-2">
+                    <div className=" w-full h-28 p-2">
                         {off ? (
                             <div className="flex flex-col text-xl font-semibold">
                                 <div className="flex flex-row gap-1">

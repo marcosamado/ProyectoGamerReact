@@ -13,7 +13,7 @@ const ProductsPage = () => {
             <h2 className="text-black text-3xl font-bold text-center mt-4">
                 Productos
             </h2>
-            <div className="flex flex-row flex-wrap">
+            <div className="flex flex-row flex-wrap max-w-6xl mx-auto">
                 {data.map((product) => (
                     <ProductCard key={product.id} {...product} />
                 ))}

@@ -5,11 +5,11 @@ import logoFacebook from "../images/facebookLogo.png";
 
 const Footer = () => {
     return (
-        <div className="flex flex-col h-48 items-center gap-5">
-            <div className="flex-auto pt-6">
+        <div className="flex flex-col h-48 items-center gap-5 sm:flex-row sm:justify-around">
+            <div className="flex-auto pt-6 sm:flex-none">
                 <img src={logo} alt="Logo Gamer" />
             </div>
-            <div className="flex-grow flex flex-col gap-4">
+            <div className="flex-grow flex flex-col gap-4 sm:text-center sm:flex-grow-0">
                 <h2 className="text-2xl text-white">Redes sociales</h2>
                 <div className="flex flex-row justify-around">
                     <div className="h-8 w-auto">

@@ -14,7 +14,7 @@ const HomePage = () => {
         <div className="">
             <section
                 className={
-                    "bg-[url('./images/backgroundMain.png')] h-[512px] flex flex-col justify-center items-center gap-9"
+                    "bg-[url('./images/fondodesktop.png')] h-[512px] flex flex-col justify-center items-center gap-9 bg-no-repeat bg-cover"
                 }
             >
                 <h1 className="text-white text-4xl font-bold text-center p-5 ">
@@ -28,11 +28,11 @@ const HomePage = () => {
                 </Link>
             </section>
 
-            <section className="">
+            <section>
                 <h2 className="text-black text-3xl font-bold text-center mt-4">
                     Productos destacados
                 </h2>
-                <ul>
+                <ul className="flex flex-row flex-wrap max-w-2xl mx-auto">
                     {data
                         .filter((product) => product.off)
                         .map((product) => (

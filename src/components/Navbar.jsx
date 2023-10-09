@@ -45,7 +45,7 @@ const Navbar = () => {
                 <button
                     className={`${
                         !openNavbar && "hidden"
-                    } absolute right-5 top-10 text-white hover:bg-orangeMain rounded-md p-1`}
+                    } absolute right-5 top-10 text-white hover:bg-orangeMain hover:scale-110 rounded-md p-1`}
                 >
                     <Link to="/carrito" onClick={handleClosenavbar}>
                         <CartIcon />
@@ -74,17 +74,17 @@ const Navbar = () => {
                     } flex flex-col text-left gap-5 text-xl text-white mt-5`}
                 >
                     <Link to="/" onClick={handleClosenavbar}>
-                        <li className="hover:bg-orangeMain rounded-sm py-2">
+                        <li className="hover:bg-orangeMain hover:pl-3 rounded-sm py-2">
                             HOME
                         </li>
                     </Link>
                     <Link to="/productos" onClick={handleClosenavbar}>
-                        <li className="hover:bg-orangeMain rounded-sm py-2">
+                        <li className="hover:bg-orangeMain hover:pl-3 rounded-sm py-2">
                             Productos
                         </li>
                     </Link>
                     <Link to="/ofertas" onClick={handleClosenavbar}>
-                        <li className="hover:bg-orangeMain rounded-sm py-2">
+                        <li className="hover:bg-orangeMain hover:pl-3 rounded-sm py-2">
                             Ofertas
                         </li>
                     </Link>
