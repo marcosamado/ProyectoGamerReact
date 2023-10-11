@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import BurguerIcon from "../icons/BurguerIcon";
 import CrossIcon from "../icons/CrossIcon";
 import logoGamer from "../images/logoGamer.png";
@@ -91,28 +91,25 @@ const Navbar = () => {
                 </ul>
             </div>
 
-            {/* NAvbar desktop */}
+            {/* NAvbar desktop **************/}
 
             <div
                 className={`hidden bg-brownMain md:flex flex-row-reverse flex-auto justify-around items-center`}
             >
-                <button className={`hidden`}>
-                    <CrossIcon />
-                </button>
                 <button className={`text-white hover:bg-orangeMain rounded-md`}>
                     <Link to="/carrito">
                         <CartIcon />
                     </Link>
                 </button>
 
-                <div className={` flex flex-row gap-2`}>
+                <div className={` flex flex-row gap-5`}>
                     <Link to="/login">
-                        <button className="text-white border w-auto rounded-md text-sm p-1 bg-orangeMain border-orangeMain">
+                        <button className="text-white border w-auto rounded-md text-sm p-2 bg-orangeMain border-orangeMain">
                             Iniciar sesion
                         </button>
                     </Link>
                     <Link to="/registro">
-                        <button className="text-white border w-auto rounded-md text-sm p-1">
+                        <button className="text-white border w-auto rounded-md text-sm p-2">
                             Registrarse
                         </button>
                     </Link>

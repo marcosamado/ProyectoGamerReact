@@ -9,7 +9,7 @@ const LayoutPublic = () => {
                 <Navbar />
             </header>
 
-            <main className=" min-h-screen font-roboto">
+            <main className="min-h-[550px] font-roboto ">
                 <Outlet />
             </main>
 
