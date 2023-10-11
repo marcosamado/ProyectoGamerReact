@@ -11,7 +11,7 @@ const HomePage = () => {
     if (error) return <p>ERROR DE FETCHING</p>;
 
     return (
-        <div className="">
+        <div>
             <section
                 className={
                     "bg-[url('./images/fondodesktop.png')] h-[512px] flex flex-col justify-center items-center gap-9 bg-no-repeat bg-cover"

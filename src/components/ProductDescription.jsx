@@ -15,17 +15,17 @@ const ProductDescription = () => {
         data[idProduct];
 
     return (
-        <>
-            <div className="w-1/2">
+        <div className="container w-3/4 h-3/4 border-2 border-gray-900 shadow-xl shadow-slate-700 rounded-lg mx-auto flex flex-col justify-between p-2 gap-2">
+            <div className="w-32 h-40">
                 <img className="w-full h-full" src={url} alt="" />
             </div>
-            <h2 className="text-3xl font-bold">{title}</h2>
-            <p className="text-xl font-semibold">{descripcion}</p>
+            <h2 className="text-2xl font-bold">{title}</h2>
+            <p className="text-lg font-semibold">{descripcion}</p>
 
             {cantidad === 1 ? (
-                <p className="text-lg font-semibold">¡ Ultima unidad !</p>
+                <p className="text-base font-semibold">¡ Ultima unidad !</p>
             ) : (
-                <p className="text-lg font-semibold">
+                <p className="text-base font-semibold">
                     Cantidad disponible: {cantidad}
                 </p>
             )}
@@ -55,7 +55,7 @@ const ProductDescription = () => {
             <button className="bg-gradient-to-tr from-orangeMain to-orange-600 rounded-md text-white p-3 w-auto text-sm shadow-md shadow-gray-700 ">
                 Agregar al carrito
             </button>
-        </>
+        </div>
     );
 };
 
