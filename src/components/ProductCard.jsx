@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const ProductCard = ({ precio, title, url, off, id }) => {
     return (
-        <div className="container w-64 h-auto mx-auto p-5 my-8 rounded-sm shadow-lg border-2 border-gray-700 shadow-gray-700 ">
+        <div className="container w-64 h-auto mx-auto p-5 my-8 rounded-sm shadow-lg border-2 border-gray-700 shadow-gray-700 md:hover:shadow-2xl md:hover:shadow-gray-900 md:hover:scale-105">
             <Link to={`/productos/${id}`}>
                 <div className="flex flex-col items-center gap-5">
                     <div className="w-32 h-40 text-center ">
@@ -21,7 +21,7 @@ const ProductCard = ({ precio, title, url, off, id }) => {
                                     </span>
                                 </div>
                                 <span className="text-black ">
-                                    $ {precio - (precio * 20) / 100}
+                                    $ {precio - (precio * off) / 100}
                                 </span>
                             </div>
                         ) : (

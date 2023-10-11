@@ -16,7 +16,7 @@ const ProductDescription = () => {
 
     return (
         <>
-            <div className="w-2/3">
+            <div className="w-1/2">
                 <img className="w-full h-full" src={url} alt="" />
             </div>
             <h2 className="text-3xl font-bold">{title}</h2>
@@ -39,7 +39,7 @@ const ProductDescription = () => {
                             {off}%off
                         </span>
                     </div>
-                    <span className=" text-2xl ">
+                    <span className=" text-2xl">
                         $ {precio - (precio * 20) / 100}
                     </span>
                 </div>

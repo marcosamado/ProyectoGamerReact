@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import BurguerIcon from "../icons/BurguerIcon";
 import CrossIcon from "../icons/CrossIcon";
 import logoGamer from "../images/logoGamer.png";
@@ -17,24 +17,24 @@ const Navbar = () => {
 
     return (
         <div className=" flex flex-row justify-between">
-            <div className="ml-4">
+            <div className="ml-4 md:flex-grow">
                 <img src={logoGamer} alt="Logo Gamer" />
             </div>
-            <button className="mr-4" onClick={handleOpenNavbar}>
+            <button className="mr-4 md:hidden" onClick={handleOpenNavbar}>
                 <BurguerIcon />
             </button>
 
             <div
                 className={`${
                     !openNavbar && "hidden"
-                } bg-gray-600/30 min-h-screen w-full fixed top-0 left-0 right-0 backdrop-blur-sm`}
+                } bg-gray-600/30 min-h-screen w-full fixed top-0 left-0 right-0 backdrop-blur-sm md:hidden`}
                 onClick={handleClosenavbar}
             ></div>
 
             <div
                 className={`${
                     openNavbar ? "w-56 p-2" : "w-0 p-0"
-                } bg-brownMain/95 min-h-screen fixed top-0 right-0 transition-all duration-150`}
+                } bg-brownMain/95 min-h-screen fixed top-0 right-0 transition-all duration-150 md:hidden`}
             >
                 <button
                     className={`${!openNavbar && "hidden"} `}
@@ -85,6 +85,53 @@ const Navbar = () => {
                     </Link>
                     <Link to="/ofertas" onClick={handleClosenavbar}>
                         <li className="hover:bg-orangeMain hover:pl-3 rounded-sm py-2">
+                            Ofertas
+                        </li>
+                    </Link>
+                </ul>
+            </div>
+
+            {/* NAvbar desktop */}
+
+            <div
+                className={`hidden bg-brownMain md:flex flex-row-reverse flex-auto justify-around items-center`}
+            >
+                <button className={`hidden`}>
+                    <CrossIcon />
+                </button>
+                <button className={`text-white hover:bg-orangeMain rounded-md`}>
+                    <Link to="/carrito">
+                        <CartIcon />
+                    </Link>
+                </button>
+
+                <div className={` flex flex-row gap-2`}>
+                    <Link to="/login">
+                        <button className="text-white border w-auto rounded-md text-sm p-1 bg-orangeMain border-orangeMain">
+                            Iniciar sesion
+                        </button>
+                    </Link>
+                    <Link to="/registro">
+                        <button className="text-white border w-auto rounded-md text-sm p-1">
+                            Registrarse
+                        </button>
+                    </Link>
+                </div>
+                <ul
+                    className={`flex flex-row text-left gap-3  text-lg text-white`}
+                >
+                    <Link to="/">
+                        <li className="hover:bg-orangeMain rounded-sm p-2">
+                            HOME
+                        </li>
+                    </Link>
+                    <Link to="/productos">
+                        <li className="hover:bg-orangeMain rounded-sm p-2">
+                            Productos
+                        </li>
+                    </Link>
+                    <Link to="/ofertas">
+                        <li className="hover:bg-orangeMain rounded-sm p-2">
                             Ofertas
                         </li>
                     </Link>

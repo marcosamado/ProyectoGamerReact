@@ -44,7 +44,7 @@ const HomePage = () => {
                 <h2 className="text-black text-3xl font-bold text-center mt-4">
                     Productos estrellas
                 </h2>
-                <div className="flex flex-col items-center justify-around gap-10 my-8">
+                <div className="flex flex-col items-center justify-around gap-10 my-8 sm:flex-row sm:my-20">
                     <Link to="/productos">
                         <div className="h-24 w-72 bg-[url('src/images/banner1.png')] text-white bg-no-repeat flex flex-col items-end justify-center rounded-md shadow-md shadow-gray-700">
                             <p className="mr-10">Sillas Gamer</p>
