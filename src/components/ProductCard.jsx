@@ -20,7 +20,7 @@ const ProductCard = ({ precio, title, url, off, id }) => {
                                         {off}%off
                                     </span>
                                 </div>
-                                <span className="text-black ">
+                                <span className="font-bold text-xl">
                                     $ {precio - (precio * off) / 100}
                                 </span>
                             </div>
@@ -30,7 +30,8 @@ const ProductCard = ({ precio, title, url, off, id }) => {
                             </span>
                         )}
                         <p className="text-sm font-semibold">
-                            12 x ${parseInt(precio / 12)} sin interes
+                            12 x ${parseFloat(precio / 12).toFixed(2)} sin
+                            interes
                         </p>
                         <p className="text-base font-semibold text-green-600">
                             Envio gratis
