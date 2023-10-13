@@ -21,7 +21,7 @@ const HomePage = () => {
                     <span className="text-orangeMain">25% </span>de descuento en
                     juegos de playstation 4
                 </h1>
-                <Link to="/productos">
+                <Link to="/ofertas">
                     <button className="text-2xl text-white bg-orangeMain h-16 w-56 rounded-md text-center">
                         Comprar
                     </button>

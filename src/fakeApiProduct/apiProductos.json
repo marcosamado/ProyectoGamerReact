@@ -1,7 +1,7 @@
 [
     {
         "precio": 5500,
-        "off": 20,
+        "off": 25,
         "id": 1,
         "title": "Final Fantasy VII",
         "url": "https://i.pinimg.com/236x/68/f1/03/68f1034b40f599a9d1c975e632621ed8.jpg",
@@ -29,7 +29,7 @@
     },
     {
         "precio": 4500,
-        "off": 20,
+        "off": 25,
         "id": 4,
         "title": "Mad Max",
         "url": "https://i.pinimg.com/236x/24/3a/c2/243ac2de81804ebd71823f358c152bde.jpg",
@@ -123,7 +123,7 @@
     },
     {
         "precio": 250000,
-        "off": 20,
+        "off": 25,
         "id": 14,
         "title": "Notebook Gamer MSI",
         "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSViQtA9z2StiCsTmZDzpwx6VF7etyDD9DOsCtVbAakmwmIDy6QDuHNswffz0c8o9ere8&usqp=CAU",

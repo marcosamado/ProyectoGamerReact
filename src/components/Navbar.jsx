@@ -18,7 +18,9 @@ const Navbar = () => {
     return (
         <div className=" flex flex-row justify-between">
             <div className="ml-4 md:flex-grow">
-                <img src={logoGamer} alt="Logo Gamer" />
+                <Link to="/">
+                    <img src={logoGamer} alt="Logo Gamer" />
+                </Link>
             </div>
             <button className="mr-4 md:hidden" onClick={handleOpenNavbar}>
                 <BurguerIcon />
