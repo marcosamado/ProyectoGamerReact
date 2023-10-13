@@ -32,9 +32,9 @@ const HomePage = () => {
                 <h2 className="text-black text-3xl font-bold text-center mt-4">
                     Productos destacados
                 </h2>
-                <ul className="flex flex-row flex-wrap max-w-2xl mx-auto">
+                <ul className="flex flex-row flex-wrap max-w-4xl mx-auto">
                     {data
-                        .filter((product) => product.off)
+                        .filter((product) => product.off >= 20)
                         .map((product) => (
                             <ProductCard key={product.id} {...product} />
                         ))}

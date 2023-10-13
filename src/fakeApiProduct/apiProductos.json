@@ -57,6 +57,7 @@
     },
     {
         "precio": 6500,
+        "off": 15,
         "id": 7,
         "title": "Crysys HD",
         "url": "https://i.pinimg.com/236x/84/5c/de/845cde142301e991ef4a409b11439a91.jpg",
@@ -66,6 +67,7 @@
     },
     {
         "precio": 65000,
+        "off": 10,
         "id": 8,
         "title": "Silla Gamer Micro Bell y240",
         "url": "https://castillo.com.ar/Image/0/500_500-501023041-1.jpg",
@@ -93,6 +95,7 @@
     },
     {
         "precio": 55000,
+        "off": 10,
         "id": 11,
         "title": "Silla Gamer Creation RF-808",
         "url": "https://d2r9epyceweg5n.cloudfront.net/stores/001/381/842/products/silla-gamer-creation1-b8cdb6ee1a251cd15b16636922147683-480-0.jpg",
@@ -139,7 +142,7 @@
     },
     {
         "precio": 190000,
-        "off": 20,
+        "off": 10,
         "id": 16,
         "title": "Notebook Gamer Asus",
         "url": "https://images.fravega.com/f300/d2376aeac8b69917957c5dba44f16131.jpg",

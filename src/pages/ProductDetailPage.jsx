@@ -15,7 +15,7 @@ const ProductDetailPage = () => {
         data[idProduct];
 
     return (
-        <div className="mt-36">
+        <div className="my-24">
             <div className=" w-3/4 border-2 border-gray-900 shadow-xl shadow-slate-700 rounded-lg mx-auto flex flex-col justify-between p-2 gap-2 md:w-[650px] md:flex-row">
                 <div className="w-32 h-40 md:w-64 md:h-96">
                     <img className="w-full h-full" src={url} alt="" />
