@@ -11,13 +11,36 @@ const HomePage = () => {
     const { data, loading, error } = useFetchProducts(
         "src/fakeApiProduct/apiProductos.json"
     );
-    const [firstImg, setFristImg] = useState(true);
+    const [firstImg, setFirstImg] = useState(true);
     const [secondImg, setSecondImg] = useState(false);
     const [thirdImg, setThirdImg] = useState(false);
 
     if (loading) return <p>Cargado...</p>;
     if (error) return <p>ERROR DE FETCHING</p>;
 
+    const handleNextSlide = () => {
+        if (firstImg) {
+            setFirstImg(false);
+            setSecondImg(true);
+            setThirdImg(false);
+        } else {
+            if (secondImg) {
+                setFirstImg(false);
+                setSecondImg(false);
+                setThirdImg(true);
+            } else {
+                if (thiImg) {
+                    setFirstImg(true);
+                    setSecondImg(false);
+                    setThirdImg(false);
+                }
+            }
+        }
+    };
+
+    console.log(firstImg);
+    console.log(secondImg);
+    console.log(thirdImg);
     return (
         <div>
             {/* <section
@@ -47,7 +70,9 @@ const HomePage = () => {
                     <div className="overflow-hidden relative h-56 rounded-lg sm:h-64 xl:h-80 2xl:h-96">
                         {/* <!-- Item 1 --> */}
                         <div
-                            className="hidden duration-700 ease-in-out"
+                            className={`${
+                                !firstImg && "hidden"
+                            } duration-700 ease-in-out`}
                             data-carousel-item
                         >
                             <span className="absolute top-1/2 left-1/2 text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 sm:text-3xl dark:text-gray-800">
@@ -61,7 +86,9 @@ const HomePage = () => {
                         </div>
                         {/* <!-- Item 2 --> */}
                         <div
-                            className="hidden duration-700 ease-in-out"
+                            className={`${
+                                !secondImg && "hidden"
+                            } duration-700 ease-in-out`}
                             data-carousel-item
                         >
                             <img
@@ -133,7 +160,7 @@ const HomePage = () => {
                     <button
                         type="button"
                         className="flex absolute top-0 right-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none"
-                        data-carousel-next
+                        onClick={handleNextSlide}
                     >
                         <span className="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
                             <svg
